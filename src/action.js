@@ -2,5 +2,6 @@
 export function test() {
   return {
       type: "test",
+      status: "OK",
   }
 };

@@ -44,6 +44,15 @@ class Chat extends Component {
                   name: 'atyenoria',
                   avatar: 'https://facebook.github.io/react/img/logo_og.png',
                 },
+                {
+                  _id: 3,
+                  text: 'Hello World',
+                  createdAt: new Date(),
+                  user: {
+                    _id: 4,
+                    name: 'atyenoria',
+                    avatar: 'https://facebook.github.io/react/img/logo_og.png',
+                  },
               },
             ],
         };
