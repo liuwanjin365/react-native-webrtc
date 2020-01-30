@@ -115,6 +115,7 @@ const styles = StyleSheet.create({
   selfView: {
     width: 200,
     height: 150,
+    backgroundColor: transparent,
   }
 });
 
