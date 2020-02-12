@@ -70,7 +70,7 @@ import {
       } else {
           if(typeof console == "undefined" || typeof console.log == "undefined")
               console = { log: function() {} };
-          // Console logging (all debugging disabled by default)
+           Console logging (all debugging disabled by default)
           Janus.trace = Janus.noop;
           Janus.debug = Janus.noop;
           Janus.log = Janus.noop;
@@ -204,23 +204,23 @@ import {
                   }
               }
           }
-          // function addJsList(srcArray) {
-          //     if (!srcArray || !Array.isArray(srcArray) || srcArray.length == 0) {
-          //         options.callback();
-          //     }
-          //     var count = 0;
-          //     addJs(srcArray[count],next);
+           function addJsList(srcArray) {
+               if (!srcArray || !Array.isArray(srcArray) || srcArray.length == 0) {
+                   options.callback();
+               }
+               var count = 0;
+               addJs(srcArray[count],next);
   
-          //     function next() {
-          //         count++;
-          //         if (count<srcArray.length) {
-          //             addJs(srcArray[count],next);
-          //         }
-          //         else {
-          //             options.callback();
-          //         }
-          //     }
-          // }
+               function next() {
+                   count++;
+                   if (count<srcArray.length) {
+                       addJs(srcArray[count],next);
+                   }
+                   else {
+                       options.callback();
+                   }
+               }
+           }
           // function addJs(src,done) {
           //     if(src === 'adapter.js') {
           //         if(window.getUserMedia && window.RTCPeerConnection) {
