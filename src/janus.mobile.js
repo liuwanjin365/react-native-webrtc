@@ -221,26 +221,26 @@ import {
                    }
                }
            }
-          // function addJs(src,done) {
-          //     if(src === 'adapter.js') {
-          //         if(window.getUserMedia && window.RTCPeerConnection) {
-          //             // Already loaded
-          //             done();
-          //             return;
-          //         }
-          //     }
-          //     var oHead = document.getElementsByTagName('head').item(0);
-          //     var oScript = document.createElement("script");
-          //     oScript.type = "text/javascript";
-          //     oScript.src = src;
-          //     oScript.onload = function() {
-          //         Janus.log("Library " + src + " loaded");
-          //         done();
-          //     }
-          //     oHead.appendChild(oScript);
-          // }
+           function addJs(src,done) {
+               if(src === 'adapter.js') {
+                   if(window.getUserMedia && window.RTCPeerConnection) {
+                       // Already loaded
+                       done();
+                       return;
+                   }
+               }
+               var oHead = document.getElementsByTagName('head').item(0);
+               var oScript = document.createElement("script");
+               oScript.type = "text/javascript";
+               oScript.src = src;
+               oScript.onload = function() {
+                   Janus.log("Library " + src + " loaded");
+                   done();
+               }
+               oHead.appendChild(oScript);
+           }
           Janus.initDone = true;
-          // addJsList(["adapter.js"]);  // We may need others in the future
+           addJsList(["adapter.js"]);  // We may need others in the future
       }
   };
   
